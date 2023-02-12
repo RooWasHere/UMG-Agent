@@ -300,7 +300,7 @@ local function start()
     end
 
     spawnItem("MMachete", 1)
-    spawnItem("AgentCC", 3)
+    spawnItem("SUPAK", 3)
     getActiveStat()
 
     workspace.ServerStuff.dropAmmo:FireServer("scrap", 90)
@@ -534,34 +534,7 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
         end
         
         if input.KeyCode == Enum.KeyCode.V then
-            local args = {
-                [1] = "AgentCC",
-                [3] = CFrame.new(413.3253173828125, -1.043271541595459, -49.34702682495117) * CFrame.Angles(-2.7744925022125244, 0.5485097169876099, 2.9451889991760254),
-                [4] = "drop",
-                [5] = {
-                    ["throwrating"] = 1,
-                    ["speedrating"] = 1.5,
-                    ["blacklisted"] = true,
-                    ["animset"] = "AGENTC",
-                    ["desc"] = "Special secure container for secure purposes.",
-                    ["weapontype"] = "Item",
-                    ["name"] = "Agent Container 'Omicron'",
-                    ["ability"] = "Retrieve lost supplies.",
-                    ["damagerating"] = {
-                        [1] = 5,
-                        [2] = 10
-                    },
-                    ["sizerating"] = 4,
-                    ["icon"] = "5898282510",
-                    ["woundrating"] = 4
-                },
-                [6] = 1,
-                [7] = false,
-                [8] = _G.serverKey,
-                [10] = _G.playerKey
-            }
-
-            workspace.ServerStuff.throwWeapon:FireServer(unpack(args))
+           
             localPlayer.Character.HumanoidRootPart.Anchored = true
             workspace.ServerStuff.playAudio:FireServer({"perks", "two"}, "summon_end", game.Players.LocalPlayer.Character.HumanoidRootPart)
             workspace.ServerStuff.playAudio:FireServer({"perks", "two"}, "summon_end", game.Players.LocalPlayer.Character.HumanoidRootPart)
