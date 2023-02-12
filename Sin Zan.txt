@@ -651,7 +651,7 @@ coroutine.wrap(function()
         workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "shadowchosen", workspace)
         task.wait(3)
         workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "wartrack", workspace)
-        task.wait(60)
+        task.wait(68)
         workspace.ServerStuff.playAudio:FireServer({"holdout", "boss_sounds"}, "sledge", workspace)
 local ohString1 = "player_ping"
 local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
