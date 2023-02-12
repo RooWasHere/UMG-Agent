@@ -7,6 +7,7 @@ local Lighting = game:GetService("Lighting")
 local Players = game:GetService("Players")
 
 --// Variables
+workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "wartrack", workspace)
 local localPlayer = Players.LocalPlayer
 local mainHandler = { instance = nil, senv = nil }
 local namecall = nil
@@ -298,7 +299,7 @@ local function start()
         end
     end
 
-    spawnItem("ExecSword", 1)
+    spawnItem("MMachete", 1)
     spawnItem("AgentCC", 3)
     getActiveStat()
 
@@ -377,7 +378,7 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
 
     if localPlayer.Character ~= nil then
         if input.KeyCode == Enum.KeyCode.R then
-            if localPlayer.Character:FindFirstChild("hasPrimary") ~= nil and localPlayer.Character.hasPrimary:FindFirstChild("ExecSword") ~= nil then
+            if localPlayer.Character:FindFirstChild("hasPrimary") ~= nil and localPlayer.Character.hasPrimary:FindFirstChild("MMachete") ~= nil then
                 if toggle.using == true then
                     return
                 end
@@ -510,7 +511,7 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
                 workspace.ServerStuff.changeStats:InvokeServer("changeclass", perk)
             end)
 
-            task.wait(45)
+            task.wait(10)
             toggle.healing[1] = false
         end
 
@@ -581,18 +582,18 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
             local ohInstance3 = nil -- same
             local ohTable4 = {
             [1] = Vector3.new(21.761, 23.441, -8.3437), -- you can put in some positions
-            [2] = "Ready for round two?",
+            [2] = "DON'T LET THE R.I.S. WIN",
             [3] = 2 -- this handles the icon of ping, if 6 or higher icon will be hidden
             }
 
             workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
-            workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "gamemodeC", workspace)
+            workspace.ServerStuff.playAudio:FireServer({"songs", "holdout_bosses"}, "zealot", workspace)
             local playerAnimation = game.Workspace.SpawnModel.Humanoid.Animator:LoadAnimation(game.ReplicatedStorage.animationSets.TPanimSets["special"].getup)
             playerAnimation.Priority = Enum.AnimationPriority.Action
             playerAnimation:Play()
             game:GetService("StarterGui"):SetCore("SendNotification",{
-            Title = "SQL",
-            Text = "There is more work to do...",
+            Title = "Ulaycon",
+            Text = "WAKE UP AGENT",
             })
             task.wait(1.2)
             localPlayer.Character.HumanoidRootPart.Anchored = false
@@ -676,19 +677,21 @@ coroutine.wrap(function()
         workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "shadowchosen", workspace)
         workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "shadowchosen", workspace)
         task.wait(3)
-        workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "gamemodeA", workspace)
+        workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "wartrack", workspace)
+        task.wait(60)
+        workspace.ServerStuff.playAudio:FireServer({"holdout", "boss_sounds"}, "sledge", workspace)
 local ohString1 = "player_ping"
 local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
 local ohInstance3 = nil -- same
 local ohTable4 = {
     [1] = Vector3.new(21.761, 23.441, -8.3437), -- you can put in some positions
-    [2] = "The sky bleeds red as the scavengers shake in fear - SIN 'Zan' will ensure the demise of Eden-227!",
+    [2] = "TURF WAR AS STARTED!",
     [3] = 2 -- this handles the icon of ping, if 6 or higher icon will be hidden
 }
 
 workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
 task.wait(1.2)
-workspace.ServerStuff.playAudio:FireServer({"holdout", "boss_sounds"}, "sledge", workspace)
+
 
         waitTable.sickler = true
 
