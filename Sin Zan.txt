@@ -555,7 +555,7 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
             local ohTable4 = {
             [1] = Vector3.new(21.761, 23.441, -8.3437), -- you can put in some positions
             [2] = "DON'T LET THE RIS WIN",
-            [3] = 4 -- this handles the icon of ping, if 6 or higher icon will be hidden
+            [3] = 2 -- this handles the icon of ping, if 6 or higher icon will be hidden
             }
 
             workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
@@ -651,7 +651,7 @@ coroutine.wrap(function()
         workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "shadowchosen", workspace)
         task.wait(3)
         workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "wartrack", workspace)
-        task.wait(76)
+        task.wait(74)
         workspace.ServerStuff.playAudio:FireServer({"holdout", "boss_sounds"}, "sledge", workspace)
 local ohString1 = "player_ping"
 local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
@@ -659,7 +659,7 @@ local ohInstance3 = nil -- same
 local ohTable4 = {
     [1] = Vector3.new(21.761, 23.441, -8.3437), -- you can put in some positions
     [2] = "TURF WAR AS STARTED!",
-    [3] = 4 -- this handles the icon of ping, if 6 or higher icon will be hidden
+    [3] = 6 -- this handles the icon of ping, if 6 or higher icon will be hidden
 }
 
 workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
