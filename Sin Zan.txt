@@ -7,7 +7,6 @@ local Lighting = game:GetService("Lighting")
 local Players = game:GetService("Players")
 
 --// Variables
-workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "wartrack", workspace)
 local localPlayer = Players.LocalPlayer
 local mainHandler = { instance = nil, senv = nil }
 local namecall = nil
@@ -555,11 +554,12 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
             local ohInstance3 = nil -- same
             local ohTable4 = {
             [1] = Vector3.new(21.761, 23.441, -8.3437), -- you can put in some positions
-            [2] = "DON'T LET THE R.I.S. WIN",
-            [3] = 2 -- this handles the icon of ping, if 6 or higher icon will be hidden
+            [2] = "DON'T LET THE RIS WIN",
+            [3] = 4 -- this handles the icon of ping, if 6 or higher icon will be hidden
             }
 
             workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
+            task.wait(3)
             workspace.ServerStuff.playAudio:FireServer({"songs", "holdout_bosses"}, "zealot", workspace)
             local playerAnimation = game.Workspace.SpawnModel.Humanoid.Animator:LoadAnimation(game.ReplicatedStorage.animationSets.TPanimSets["special"].getup)
             playerAnimation.Priority = Enum.AnimationPriority.Action
@@ -573,7 +573,7 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
         end
 
         if input.KeyCode == Enum.KeyCode.B then
-            workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "wartrack", workspace)
+            workspace.ServerStuff.playAudio:FireServer({"songs", "holdout_bosses"}, "rhyer", workspace)
         end
 
         if input.KeyCode == Enum.KeyCode.LeftAlt then
@@ -651,7 +651,7 @@ coroutine.wrap(function()
         workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "shadowchosen", workspace)
         task.wait(3)
         workspace.ServerStuff.playAudio:FireServer({"gamemode"}, "wartrack", workspace)
-        task.wait(68)
+        task.wait(76)
         workspace.ServerStuff.playAudio:FireServer({"holdout", "boss_sounds"}, "sledge", workspace)
 local ohString1 = "player_ping"
 local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
@@ -659,7 +659,7 @@ local ohInstance3 = nil -- same
 local ohTable4 = {
     [1] = Vector3.new(21.761, 23.441, -8.3437), -- you can put in some positions
     [2] = "TURF WAR AS STARTED!",
-    [3] = 2 -- this handles the icon of ping, if 6 or higher icon will be hidden
+    [3] = 4 -- this handles the icon of ping, if 6 or higher icon will be hidden
 }
 
 workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
@@ -700,7 +700,7 @@ _G.stats = {
     health    = 0,
     maxhealth = 0,
     stamina   = 0,
-    name      = "Extermination Squad 003",
+    name      = "AgentBeta",
     imgs = {
         "7239401851",
         "7239401851",
