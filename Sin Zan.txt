@@ -658,7 +658,7 @@ local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
 local ohInstance3 = nil -- same
 local ohTable4 = {
     [1] = Vector3.new(21.761, 23.441, -8.3437), -- you can put in some positions
-    [2] = "TURF WAR AS STARTED!",
+    [2] = "TURF WAR HAS STARTED!",
     [3] = 6 -- this handles the icon of ping, if 6 or higher icon will be hidden
 }
 
