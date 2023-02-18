@@ -26,8 +26,8 @@ local activeStat = {
 
 --// Animation
 local TPanimSets = ReplicatedStorage.animationSets.TPanimSets
-TPanimSets.global.shove.AnimationId = TPanimSets["1HS"].jab.AnimationId
-TPanimSets.global.stagger.AnimationId = TPanimSets.global.special_staggerA.AnimationId
+TPanimSets.global.shove.AnimationId = TPanimSets["2H"].final.AnimationId
+TPanimSets.global.run.AnimationId = TPanimSets.global.runOLD.AnimationId
 TPanimSets.global.low_walk.AnimationId = TPanimSets.global.runOLD.AnimationId
 TPanimSets.global.low_idle.AnimationId = TPanimSets.global.idle.AnimationId
 
