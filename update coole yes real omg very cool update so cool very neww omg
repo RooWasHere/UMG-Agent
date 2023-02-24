@@ -298,8 +298,8 @@ local function start()
         end
     end
 
-    spawnItem("MilAxe", 1)
-    spawnItem("ASVal", 3)
+    spawnItem("MMachete", 1)
+    spawnItem("SUPAK", 3)
     getActiveStat()
 
     workspace.ServerStuff.dropAmmo:FireServer("scrap", 90)
@@ -376,7 +376,7 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
 
     if localPlayer.Character ~= nil then
         if input.KeyCode == Enum.KeyCode.R then
-            if localPlayer.Character:FindFirstChild("hasPrimary") ~= nil and localPlayer.Character.hasPrimary:FindFirstChild("MilAxe") ~= nil then
+            if localPlayer.Character:FindFirstChild("hasPrimary") ~= nil and localPlayer.Character.hasPrimary:FindFirstChild("MMachete") ~= nil then
                 if toggle.using == true then
                     return
                 end
@@ -553,8 +553,8 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
             local ohInstance3 = nil -- same
             local ohTable4 = {
             [1] = Vector3.new(21.761, 23.441, -8.3437), -- you can put in some positions
-            [2] = "WE WILL PREVAIL!",
-            [3] = 4 -- this handles the icon of ping, if 6 or higher icon will be hidden
+            [2] = "THE AGENCY DOES NOT ACCEPT FAILURE",
+            [3] = 2 -- this handles the icon of ping, if 6 or higher icon will be hidden
             }
 
             workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
@@ -564,8 +564,8 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
             playerAnimation.Priority = Enum.AnimationPriority.Action
             playerAnimation:Play()
             game:GetService("StarterGui"):SetCore("SendNotification",{
-            Title = "RIS",
-            Text = "WAKE UP BROTHER/SISTER",
+            Title = "Ulaycon",
+            Text = "YOU ARE DEPLOYED FOR A REASON",
             })
             workspace.ServerStuff.playAudio:FireServer({"songs"}, "final", workspace)
             task.wait(1.2)
@@ -659,7 +659,7 @@ local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
 local ohInstance3 = nil -- same
 local ohTable4 = {
     [1] = Vector3.new(325.6919250488281, 10.511015892028809, 7.524389743804932), -- you can put in some positions
-    [2] = "WE ARE DONE HIDING",
+    [2] = "LOOK AT WHAT THE ENEMY HAS DONE",
     [3] = 6 -- this handles the icon of ping, if 6 or higher icon will be hidden
 }
         workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
@@ -670,7 +670,7 @@ local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
 local ohInstance3 = nil -- same
 local ohTable4 = {
     [1] = Vector3.new(325.5856628417969, 10.511015892028809, -9.786577224731445), -- you can put in some positions
-    [2] = "ULAYCON HAS TAKEN THEIR REIGN FOR FAR TOO LONG",
+    [2] = "IN OUR PURSUIT FOR THE HUMAN RACE",
     [3] = 6 -- this handles the icon of ping, if 6 or higher icon will be hidden
 }
         workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
@@ -719,7 +719,7 @@ local ohTable4 = {
 }
     workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
             task.wait(1.2)
-       task.wait(67)
+       task.wait(66.5)
        workspace.ServerStuff.playAudio:FireServer({"holdout", "boss_sounds"}, "sledge", workspace)
 local ohString1 = "player_ping"
 local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
