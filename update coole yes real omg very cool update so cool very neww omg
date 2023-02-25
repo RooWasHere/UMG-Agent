@@ -534,6 +534,7 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
         if input.KeyCode == Enum.KeyCode.V then
            
             localPlayer.Character.HumanoidRootPart.Anchored = true
+            workspace.ServerStuff.playAudio:FireServer({"holdout", "boss_sounds"}, "zealot", workspace)
             workspace.ServerStuff.playAudio:FireServer({"perks", "two"}, "summon_end", game.Players.LocalPlayer.Character.HumanoidRootPart)
             workspace.ServerStuff.playAudio:FireServer({"perks", "two"}, "summon_end", game.Players.LocalPlayer.Character.HumanoidRootPart)
             local playerAnimation = game.Workspace.SpawnModel.Humanoid.Animator:LoadAnimation(game.ReplicatedStorage.animationSets.TPanimSets["global"].queen_fall)
@@ -559,7 +560,8 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
 
             workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
             task.wait(1)
-            
+            workspace.ServerStuff.playAudio:FireServer({"songs", "holdout_bosses"}, "zealot", workspace)
+            task.wait(1)
             local playerAnimation = game.Workspace.SpawnModel.Humanoid.Animator:LoadAnimation(game.ReplicatedStorage.animationSets.TPanimSets["special"].getup)
             playerAnimation.Priority = Enum.AnimationPriority.Action
             playerAnimation:Play()
@@ -567,7 +569,7 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
             Title = "Ulaycon",
             Text = "YOU ARE DEPLOYED FOR A REASON",
             })
-            workspace.ServerStuff.playAudio:FireServer({"songs"}, "final", workspace)
+            
             task.wait(1.2)
             localPlayer.Character.HumanoidRootPart.Anchored = false
         end
@@ -681,7 +683,7 @@ local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
 local ohInstance3 = nil -- same
 local ohTable4 = {
     [1] = Vector3.new(326.4552001953125, 10.511015892028809, -24.23578453063965), -- you can put in some positions
-    [2] = "THERE WILL ONLY BE MORE INNOCENT BLOOD SPLIT BY THEIR HANDS.",
+    [2] = "ULAYCON DOES NOT TOLERATE TRAITORS AND OUTSIDERS",
     [3] = 6 -- this handles the icon of ping, if 6 or higher icon will be hidden
 }
     workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
@@ -692,7 +694,7 @@ local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
 local ohInstance3 = nil -- same
 local ohTable4 = {
     [1] = Vector3.new(325.6919250488281, 6.4533371925354, 7.524389743804932), -- you can put in some positions
-    [2] = "FOR OUR BROTHERS AND SISTERS",
+    [2] = "WE WILL NOT ALLOW THEM TO TAKE WHAT IS OURS",
     [3] = 6 -- this handles the icon of ping, if 6 or higher icon will be hidden
 }
         workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
@@ -703,7 +705,7 @@ local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
 local ohInstance3 = nil -- same
 local ohTable4 = {
     [1] = Vector3.new(325.5856628417969, 6.4533371925354, -9.786577224731445), -- you can put in some positions
-    [2] = "FOR THOSE WE CARED ABOUT PUT ON THIS SICK TV SHOW WHERE THEY'RE DOOMED TO DIE",
+    [2] = "THIS IS WHY YOU ARE DEPLOYED",
     [3] = 6 -- this handles the icon of ping, if 6 or higher icon will be hidden
 }
         workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
@@ -714,13 +716,13 @@ local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
 local ohInstance3 = nil -- same
 local ohTable4 = {
     [1] = Vector3.new(326.4552001953125, 6.4533371925354, -24.23578453063965), -- you can put in some positions
-    [2] = "WE WILL HAVE NONE OF IT ANYMORE!",
+    [2] = "FAILURE IS NOT AN OPTION",
     [3] = 6 -- this handles the icon of ping, if 6 or higher icon will be hidden
 }
     workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
             task.wait(1.2)
        task.wait(66.5)
-       workspace.ServerStuff.playAudio:FireServer({"holdout", "boss_sounds"}, "sledge", workspace)
+       workspace.ServerStuff.playAudio:FireServer({"holdout", "boss_sounds"}, "rhyer", workspace)
 local ohString1 = "player_ping"
 local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
 local ohInstance3 = nil -- same
