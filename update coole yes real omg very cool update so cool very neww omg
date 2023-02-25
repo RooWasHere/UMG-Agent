@@ -549,6 +549,7 @@ _G.connection[1] = UserInputService.InputBegan:Connect(function(input, gameProce
             playerAnimation:AdjustSpeed(0.45)
             task.wait(0.5)
             end
+            task.wait(2)
             local ohString1 = "player_ping"
             local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
             local ohInstance3 = nil -- same
@@ -721,7 +722,7 @@ local ohTable4 = {
 }
     workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
             task.wait(1.2)
-       task.wait(66.5)
+       task.wait(64.5)
        workspace.ServerStuff.playAudio:FireServer({"holdout", "boss_sounds"}, "rhyer", workspace)
 local ohString1 = "player_ping"
 local ohInstance2 = game.Workspace.activePlayers --this doesn't do anything
